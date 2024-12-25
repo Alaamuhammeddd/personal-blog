@@ -1,0 +1,126 @@
+@import url("base.css");
+@import url("header.css");
+@import url("main.css");
+@import url("footer.css");
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  grid-area: main;
+  padding: 20px 0;
+  min-height: 100vh;
+}
+
+.post {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+  margin-bottom: 10px;
+}
+
+.post p {
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.read-more:hover {
+  background: #555;
+  transition: 0.2s ease;
+}
+@media (min-width: 769px) {
+  .container {
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+      "header header header"
+      "nav main sidebar"
+      "footer footer footer";
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+      "header header header header"
+      "nav main sidebar"
+      "footer footer footer footer footer";
+  }
+}
+
+/* .social-sharing h3 {
+  display: flex;
+  justify-content: center;
+}
+.social-sharing ul {
+  list-style-type: none;
+  text-decoration: none;
+  display: grid;
+} */
+.social-sharing {
+  text-align: center; /* Centers the section content */
+  margin: 20px 0;
+}
+
+.social-sharing .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-sharing ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.social-sharing ul li {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.social-sharing ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.social-sharing ul li a:hover {
+  color: #0077b5;
+  transition: color 0.3s ease;
+}
